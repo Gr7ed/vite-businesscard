@@ -1,0 +1,126 @@
+
+.business-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 2rem;
+  flex: 1;
+  box-sizing: border-box;
+  padding: 2.5rem 2rem;
+}
+
+/* Info section — stacked grid with centered items */
+.info {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+  gap: 1.25rem;
+}
+
+.info-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.info-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.info-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.info-details h1 {
+  margin: 0;
+}
+
+.info-details h2 {
+  margin: 0;
+}
+
+.info-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.info-buttons button {
+  flex: 1 1 auto;
+  min-width: 120px;
+  max-width: 200px;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--social-bg);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.info-buttons button:hover {
+  background: var(--accent-bg);
+  border-color: var(--accent-border);
+}
+
+.info-buttons a {
+  color: var(--text-h);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* About & Interests — side-by-side grid on wide screens */
+.business-card-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.about,
+.interests {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--social-bg);
+}
+
+.about h3,
+.interests h3 {
+  margin: 0;
+  font-family: var(--heading);
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: var(--text-h);
+}
+
+@media (max-width: 640px) {
+  .business-card {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .business-card-content {
+    grid-template-columns: 1fr;
+  }
+
+  .info-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .info-buttons button {
+    max-width: none;
+  }
+}
