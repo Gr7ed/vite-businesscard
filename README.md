@@ -1,16 +1,55 @@
-# React + Vite
+# Vite Business Card
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple digital business card application built using React and Vite. It showcases fundamental React concepts and modern web development practices.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+To get a local copy up and running, follow these simple steps.
 
-## React Compiler
+### Prerequisites
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine. This project uses `npm` for package management.
 
-## Expanding the ESLint configuration
+### Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  Clone the repository to your local machine.
+2.  Navigate into the project directory.
+3.  Install the dependencies:
+    ```sh
+    npm install
+    ```
+
+## Available Scripts
+
+In the project directory, you can run the following commands:
+
+### `npm run dev`
+
+Runs the app in development mode. Open http://localhost:5173 (the port might be different if 5173 is in use) to view it in the browser. The page will reload if you make edits.
+
+### `npm run build`
+
+Builds the app for production to the `dist` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
+
+### `npm run lint`
+
+Lints the project files using ESLint to check for code quality and style issues.
+
+### `npm run preview`
+
+Serves the production build from the `dist` folder locally. This is a good way to check if the production build works correctly before deploying.
+
+## Dependencies
+
+This project relies on the following packages:
+
+### Production Dependencies
+-   **react**: A JavaScript library for building user interfaces.
+-   **react-dom**: Provides DOM-specific methods that can be used at the top level of your app.
+
+### Development Dependencies
+-   **@vitejs/plugin-react**: Enables React support in Vite.
+-   **vite**: A fast frontend build tool that provides a leaner development experience.
+-   **eslint**: A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript.
+-   Various ESLint plugins and configurations to enforce code quality.
+-   Type definitions for React (`@types/react`, `@types/react-dom`).
