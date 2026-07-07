@@ -1,4 +1,5 @@
 import suhailImage from '../assets/suhail.jpg'
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 function Info() {
   return (
@@ -12,8 +13,12 @@ function Info() {
             <a href="mailto:suhail14217@gmail.com">suhail14217@gmail.com</a>
         </div>
         <div className="info-buttons">
-            <a target="_blank" href="https://www.linkedin.com/in/suhail-khalil/">LinkedIn</a>
-            <a target="_blank" href="https://github.com/Gr7ed">GitHub</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/suhail-khalil/">
+                <FaLinkedin /> LinkedIn
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/Gr7ed">
+                <FaGithub /> GitHub
+            </a>
         </div>
     </section>
   )
