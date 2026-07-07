@@ -1,8 +1,10 @@
+import suhailImage from '../assets/suhail.jpg'
+
 function Info() {
   return (
     <section className="info">
         <div className="info-image">
-            <img src="./src/assets/suhail.jpg" alt="Suhail Khalil" />
+            <img src={suhailImage} alt="Suhail Khalil" />
         </div>
         <div className="info-details">
             <h1>Suhail Khalil</h1>
