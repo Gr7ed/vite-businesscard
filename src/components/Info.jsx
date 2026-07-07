@@ -2,16 +2,16 @@ function Info() {
   return (
     <section className="info">
         <div className="info-image">
-            <img src="./src/assets/hero.png" alt="Suhail Khalil" />
+            <img src={import.meta.env.VITE_PROFILEIAMGEURL} alt="Suhail Khalil" />
         </div>
         <div className="info-details">
             <h1>Suhail Khalil</h1>
             <h2>Full Stack Developer</h2>
-            <p>suhail.com</p>
+            <a href="mailto:suhail14217@gmail.com">suhail14217@gmail.com</a>
         </div>
         <div className="info-buttons">
-            <button><a href="https://www.linkedin.com/in/suhail-khalil-a4717b200/">LinkedIn</a></button>
-            <button><a href="https://github.com/suhailkhalil">GitHub</a></button>
+            <a target="_blank" href="https://www.linkedin.com/in/suhail-khalil/">LinkedIn</a>
+            <a target="_blank" href="https://github.com/Gr7ed">GitHub</a>
         </div>
     </section>
   )

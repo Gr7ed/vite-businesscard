@@ -2,10 +2,16 @@
 .business-card {
   display: grid;
   grid-template-rows: auto 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
   flex: 1;
   box-sizing: border-box;
-  padding: 2.5rem 2rem;
+  padding: 1.5rem 1rem;
+  background: linear-gradient(
+    160deg,
+    var(--accent-bg) 0%,
+    var(--bg) 45%,
+    var(--code-bg) 100%
+  );
 }
 
 /* Info section — stacked grid with centered items */
@@ -13,7 +19,7 @@
   display: grid;
   grid-template-rows: auto auto auto;
   justify-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .info-image {
@@ -23,8 +29,8 @@
 }
 
 .info-image img {
-  width: 200px;
-  height: 200px;
+  width: min(160px, 70vw);
+  height: min(160px, 70vw);
   object-fit: cover;
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -37,50 +43,45 @@
   gap: 0.25rem;
 }
 
-.info-details h1 {
-  margin: 0;
-}
-
-.info-details h2 {
-  margin: 0;
+.info-details a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  word-break: break-word;
 }
 
 .info-buttons {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
   gap: 0.75rem;
   width: 100%;
 }
 
-.info-buttons button {
-  flex: 1 1 auto;
-  min-width: 120px;
-  max-width: 200px;
-  padding: 0.625rem 1.25rem;
+.info-buttons a {
+  display: block;
+  padding: 0.75rem 1.25rem;
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--social-bg);
   cursor: pointer;
   transition: background 0.2s, border-color 0.2s;
+  color: var(--text-h);
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
 }
 
-.info-buttons button:hover {
+.info-buttons a:hover {
   background: var(--accent-bg);
   border-color: var(--accent-border);
 }
 
-.info-buttons a {
-  color: var(--text-h);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* About & Interests — side-by-side grid on wide screens */
+/* About & Interests — single column by default */
 .business-card-content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
   align-items: start;
 }
 
@@ -90,7 +91,7 @@
   flex-direction: column;
   gap: 0.5rem;
   text-align: left;
-  padding: 1.25rem;
+  padding: 1rem;
   border: 1px solid var(--border);
   border-radius: 10px;
   background: var(--social-bg);
@@ -101,26 +102,64 @@
   margin: 0;
   font-family: var(--heading);
   font-weight: 500;
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--text-h);
 }
 
-@media (max-width: 640px) {
+/* Tablet and up */
+@media (min-width: 640px) {
   .business-card {
-    padding: 1.5rem 1rem;
-    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+    gap: 1.75rem;
   }
 
-  .business-card-content {
-    grid-template-columns: 1fr;
+  .info {
+    gap: 1.25rem;
+  }
+
+  .info-image img {
+    width: 200px;
+    height: 200px;
   }
 
   .info-buttons {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 
-  .info-buttons button {
-    max-width: none;
+  .info-buttons a {
+    display: inline-block;
+    flex: 1 1 auto;
+    min-width: 120px;
+    max-width: 200px;
+    padding: 0.625rem 1.25rem;
+  }
+
+  .about,
+  .interests {
+    padding: 1.25rem;
+  }
+
+  .about h3,
+  .interests h3 {
+    font-size: 1.125rem;
+  }
+}
+
+/* Two-column content layout */
+@media (min-width: 768px) {
+  .business-card-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .business-card {
+    padding: 2.5rem 2rem;
+    gap: 2rem;
   }
 }
