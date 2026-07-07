@@ -2,7 +2,7 @@ function Info() {
   return (
     <section className="info">
         <div className="info-image">
-            <img src={import.meta.env.VITE_PROFILEIAMGEURL} alt="Suhail Khalil" />
+            <img src="./src/assets/suhail.jpg" alt="Suhail Khalil" />
         </div>
         <div className="info-details">
             <h1>Suhail Khalil</h1>
