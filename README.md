@@ -39,6 +39,15 @@ Lints the project files using ESLint to check for code quality and style issues.
 
 Serves the production build from the `dist` folder locally. This is a good way to check if the production build works correctly before deploying.
 
+## Deployment
+
+This repository is configured to deploy automatically to GitHub Pages on pushes to `main` through `.github/workflows/ci-cd.yml`.
+
+To publish successfully:
+
+1. Go to **Settings → Pages** in GitHub.
+2. Set **Source** to **GitHub Actions**.
+
 ## Dependencies
 
 This project relies on the following packages:
